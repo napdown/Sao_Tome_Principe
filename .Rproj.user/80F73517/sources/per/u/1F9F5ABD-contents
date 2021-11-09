@@ -1,0 +1,113 @@
+```{r}
+install.packages("RNetCDF")              #! 'RNetCDF' package substitution
+library(RNetCDF)
+
+#Enter lat and lon ranges
+lat.range=c(-40,-44)        #! Ranges instead of point values. Order does not matter
+lon.range=c(140,150)
+
+# enter in variable you want to download see: http://thredds.northwestknowledge.net:8080/thredds/terraclimate_aggregated.html
+
+var="ppt"
+
+baseurlagg <- paste0(paste0("http://thredds.northwestknowledge.net:8080/thredds/dodsC/agg_terraclimate_",var),"_1958_CurrentYear_GLOBE.nc")
+
+nc <- open.nc(baseurlagg)
+lon <- var.get.nc(nc, "lon")
+lat <- var.get.nc(nc, "lat")
+lat.range <- sort(lat.range)                              #!sort user input values from low to high
+lon.range <-sort(lon.range)
+lat.index <- which(lat>=lat.range[1]&lat<=lat.range[2])    #! index values within specified range
+lon.index <- which(lon>=lon.range[1]&lon<=lon.range[2])    
+lat.n <- length(lat.index)                                #!value for count
+lon.n <- length(lon.index)
+start <- c(lon.index[1], lat.index[1], 1)
+count <- c(lon.n, lat.n, NA)                            #! parameter change: 'NA' instead of '-1' to signify entire dimension
+
+
+# read in the full period of record using aggregated files
+
+data <-var.get.nc(nc, variable = var,start = start, count,unpack=TRUE)    #! argument change: 'variable' instead of 'varid'  # Output is now a matrix
+
+myterra<-as.data.frame(data)
+
+```
+```{r}
+
+ee_Initialize()
+Tmax<-ee$ImageCollection("IDAHO_EPSCOR/TERRACLIMATE")$
+  select('tmmx')
+
+library(sf)
+#Africa_Trace<-read_sf("C:/Workspace/RMardown_NAPS/Open-NAPs-Data/opennaps/Africa_Trace.shp")  
+#need to reconfigure this path to your workspace
+
+admin2<-ee$FeatureCollection("FAO/GAUL/2015/level2")
+admin0<-ee$FeatureCollection("FAO/GAUL/2015/level0")
+stp2<- admin2$filter(ee$Filter$eq('ADM0_NAME', 'Sao Tome and Principe'))
+stp0<- admin0$filter(ee$Filter$eq('ADM0_NAME', 'Sao Tome and Principe'))
+stp2_sf<-ee_as_sf(stp2)
+stp0_sf<-ee_as_sf(stp0)
+saoT<-split(stp2_sf, stp2_sf$ADM1_NAME)
+
+Tmax_stp0<-ee_extract(x=Tmax, y=stp0_sf, fun=ee$Reducer$mean())
+Tmax_stp2<-ee_extract(x=Tmax, y=stp2_sf, fun=ee$Reducer$mean())
+
+Tmaxlong<-pivot_longer(Tmax_stp0,cols = 9:764,names_to = 'month',values_to = 'tmax')
+Tmaxlong$Date<-seq(as.Date('1958-01-01'), by="month", length.out=756)
+Tmaxlong$Date<-Date
+Tmaxlong$tmax<-Tmaxlong$tmax*0.1
+ 
+
+tmax_ann<-Tmaxlong%>%mutate(year=year(Date), month=month(Date))%>%
+  group_by(year)%>%  summarise(tmax=mean(tmax))
+
+library(xts)
+library(dygraphs)
+
+tmax_ts<-xts(Tmaxlong$tmax,Tmaxlong$Date)
+
+
+par(mfrow=c(1,2))
+dygraph(tmax_ts, main = "Monthly Temperature Time Series") %>% 
+  dyRangeSelector(dateWindow = c("1961-01-01", "2020-12-01"))
+
+dygraph(tmax_ann, main = "Annual Temperature Time Series") %>% 
+  dyRangeSelector(dateWindow = c("1961-01-01", "2020-12-01"))
+
+```
+
+```{r}
+library(chirps)
+library(terra)
+library("remotes")
+
+install_github("ropensci/chirps", build_vignettes = TRUE)
+vignette("Overview", package = "chirps")
+
+0.06367929096929353, 6.53511757621049
+0.160450, 6.651068
+0.28026436354982565, 6.488653086231017
+0.37189529321546516, 6.638658753809633
+0.30809310282414976, 6.734363727242145
+
+dates<- c("1991-01-01", "2020-12-31")
+latlon<-data.frame(lon=c(6.5351,6.65106,6.48865,6.63865,6.73436),
+                   lat=c(0.0636,0.16045,0.28026,0.37189,0.30809))
+
+stp_chps<-get_chirps(latlon, dates)
+stp_chts<-get_chirts(latlon, dates, var='Tmax')
+
+pr_mon<-stp_chps%>%mutate(year=year(date), month=month(date))%>%
+  group_by(month,year)%>%summarise(chps_mon=mean(sum(chirps)))
+pr_ann<-stp_chps%>%mutate(year=year(date), month=month(date))%>%
+  group_by(year)%>%summarise(chps_ann=mean(sum(chirps)))
+plot_ly(type = 'bar', data=pr_ann, x=~year, y=~chps_ann)
+
+
+stp_chps2<-get_chirps(stp0_sf,dates)
+
+```
+
+
+

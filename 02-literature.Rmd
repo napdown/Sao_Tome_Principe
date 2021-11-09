@@ -1,0 +1,134 @@
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE)
+``` 
+
+# FRAMEWORK FOR THE NAP
+
+##  Essential functions of the NAP process:
+
+The process to embed adaptation into national policies has accelerated in both developed and developing countries. Substantial headway has been made in the development of climate change adaptation (CCA) strategies and plans, which include legislation and national strategies . The National Adaptation Plan (NAP) for Sao Tome and Principe will follow a dynamic, iterative approach that imparts elements of continuous learning and improvement. Key to this, is the collection of lessons learned from community-based activities that will address the context-specific elements of climate change adaptation together with emerging barriers and limits to adaptation. Indeed, there is no single approach to adaptation planning due to the multifarious nature of adaptation, and more often a mixed approach of both top-down and bottom-up interactions occurs. 
+
+The ultimate objective for Sao Tome and Principe’s adaptation planning process is to shift from a project-based system towards a coordinated and coherent approach, across key vulnerable sectors and at all levels (Sao Tome and Principe Readiness and Preparatory Support Proposal, 2020). Linkages with local, subnational and national levels of government, incorporating the full participation of a broad range of stakeholders is imperative. Such approaches that lean on the traditional knowledge and technical expertise of the Saotomean society from national government officials and stakeholders to civil society organizations, academia and private sector actors, will stimulate dynamic responses in terms of climate change adaptation options and advance societal goals. 
+
+While national governments largely adopt a coordinating role in adaptation planning and implementation, at the state and local levels climate change adaptation responses have diverse processes and outcomes (Mimura et al., n.d.). Local actors face the complexity of adaptation with insufficient technical guidance and data on local vulnerabilities and potential impacts. Yet given the availability of information, local agencies and planners are inundated with adaptation options needed to address future climatic changes (Mimura et al., n.d.). This coupled with the uncertain outcomes of their decisions and the complexities of dynamic interlocked systems, highlights the importance of strengthening vertical linkages within government and horizontal nodes between sectors, actors and policies functioning at comparable levels. Furthermore, enhanced action on adaptation should follow a country-driven, gender-sensitive, participatory approach, guided by the best available science and indigenous knowledge, taking into consideration vulnerable groups, communities and ecosystems (National Adaptation Plans, 2012).
+
+
+##  The NAP as the umbrella programme for adaptation:
+
+The NAP process in Sao Tome and Principe proposes a measured approach towards transforming the country’s ability to address climate change adaptation. In spite of the lack of a comprehensive institutional framework to set out a coordinated and cross-sectoral approach to adaptation, and the need for a national investment plan to guide climate change adaptation investments, the NAP is veritably integral to ensure a cohesive approach to adaptation planning at all levels. The NAP will serve as an umbrella programme for all climate change adaptation initiatives, projects and programs. It will enrich the collective actions undertaken and bridge the gaps with respect to climate data and information, capacity building, policy mainstreaming, adaptation finance and monitoring (Sao Tome and Principe Readiness and Preparatory Support Proposal, 2020).
+
+In Sao Tome and Principe, the current institutional framework to support climate change adaptation comprises: 
+
+*	The Ministry of Infrastructure, Natural Resources and Environment (MNREE), renamed Ministry of Public Works, Infrastructure and, Natural Resources and Environment (MPWINRE), which is accountable for the coordination of environmental issues through its General Directorate vision of Environment (GDE); the General Directoratevision of Natural Resources (GDNR) which is responsible for the integrated and sustainable management of natural resources (including water, mineral and petroleum resources); the National Committee for the Environment (CAN) that coordinates government initiatives related to sustainable development and the integration of environment issues into development strategies; and the Observatory for Environmental Information (OEI) who’s responsibilities include developing and maintaining a database of all environmental-related projects implemented in country for stakeholder dissemination.  
+*	The National Institute of Meteorology (NIM), which is responsible for the collection, analysis, management and dissemination of weather and climate-related information. 
+*	The National Disaster Preparedness and Response Council (CONPREC) in charge of coordination of disaster and climate risk management (D/CRM) activities and effective response to disasters. 
+*	The National Committee on Climate Change (NCCC), which coordinates climate change mitigation and adaptation initiatives. 
+
+The NAP intends to build on Sao Tome and Principe’s third National Communication, which complements the adaptation measures recommended in the previous versions of the National Communication, including the NAPA and a number of adaptation projects. It will undertake scientific analysis on local vulnerabilities and climate change impacts in key sectors of the economy, including agriculture and livestock, water resources and coastal zones. 
+
+
+##  Climate change adaptation priorities identified in Sao Tome and Principe’s INDC
+
+Sao Tome and Principe’s Intended Nationally Determined Contribution (INDC) spotlights climate change adaptation as a priority for national authorities. It calls for financial resources as well as technology and capacity building support through international assistance, to implement adaptation and mitigation measures. Adaptation measures in the INDC are aimed at improving the country’s ability to adapt to the adverse impacts of climate change as a means to contribute to national development. This rationale takes into consideration Sao Tome and Principe’s ecosystem services and its status as a sink of Greenhouse Gases (GHGs), with the capacity to sequester CO2 from the atmosphere. As a Small Island Developing State (SIDS), the country demonstrates conditions of vulnerability across all sectors of the national economy including agriculture and livestock; forest and soil; water, energy and fishing; coastal zone and population; and health and education (Sao Tome and Principe Intended Nationally Determined Contribution, 2015). 
+
+Contingent on international funding, Sao Tome and Principle pledges to implement the following actions in the short to medium term : (I) strengthen the National Service of Civil Protection and Fire Brigade by 2025, to respond to fires and other environmental disasters, increasing resilience to climate change and contributing to social well-being; (II) reduce the number of people living in vulnerable at-risk areas by providing housing in safer areas; (III) develop a national program for sustainable management of forest and agroforestry ecosystems by 2025; (IV) introduce radar reflectors on board all fishing vessels by 2025, to reduce the number of accidents at sea; and (V) train and equip fishermen to ensure safe fishing and proper use of fishing gear. 
+
+In conformance with the NAP technical guidelines, the NAP entails a medium- and long-term approach, integrated within national development planning processes and strategies to reduce vulnerability to the adverse impacts of climate change (National Adaptation Plans, 2012). In the medium to long term, Sao Tome and Principe has committed to implement adaptation activities subject to the availability of international support to subsidize their financial, technological and capacity-building needs. These include actions to: (I) reduce the illegal and indiscriminate felling of trees by 15% by 2030; (II) develop scientific and technical research on adaptation of new productive crop varieties with a broad spectrum of tolerance to adverse climate impacts by 2030; (III) promote forestry/planting of species resistant to dry and low rainfall by 2030; (IV) improve pasture with grazing selection by applying rotation management of the plots by 2030; (V) increase the resilience to erosion and maritime river and storm flooding of coastal areas through improved coastal protection for vulnerable communities; and (VI) reduce the use of nitrogen fertilizers in agriculture by 2030. 
+
+
+##	  Gaps and barriers to adaptation as identified in the INDC: 
+
+* Limited availability and access to climate change information  
+*	Lack of access to a centralized database 
+*	Lack of capacity building for national experts on specific issues 
+*	Limited access to efficient and modern technologies 
+*	Inadequate technological skills in the national marketplace 
+*	Limited capacity of the National Climate Change Committee 
+*	Lack of policies and regulations for key sectors
+*	Limited access to finance
+*	Limited state budgets to create an enabling environment for private sector investment
+*	Relatively long period for returns on investment
+
+##  Existing Initiatives and Projects on Climate Change Adaptation:
+
+
+```{r}
+library(flextable)
+library(magrittr)
+programs<-readxl::read_excel("Tables_from_NAP.xlsx", 
+    sheet = "existing_programs")
+t1<-flextable(programs,col_keys = names(programs),
+  cwidth = 3,
+  cheight = 0.01,
+  defaults = list(),
+   theme_booktabs())
+t2<-fontsize(t1,part = 'all', size = 8)
+t3<-border_outer(t2,part = 'all', border = NULL)
+t4<-border_inner(t3,part = 'all', border = NULL)
+t5<-set_caption(t4, "Existing Initiatives and Projects on Climate Change Adaptation ")
+t5
+
+```
+
+
+##  Lessons from Sao Tome and Principe’s NAPA process:
+
+On account of the United Nations Framework Convention on Climate Change’s (UNFCCC) Clean Development Mechanism (CDM), Sao Tome and Principe is a constituent of a group of countries that are categorized as carbon sinks, yet one that is particularly affected not only by climate change but also by the costs of adaptation and mitigation required to address it. All things considered, there is also a lack of appropriate adaptation solutions to address climate change in the country.  
+
+Sao Tome and Principe’s NAPA narrowly focuses its efforts on assessing the country’s adaptation priorities. In this way, it seeks to: (1) develop and implement projects based on vulnerability to current and future impacts of climate change; (2) protect human life and ensure wellbeing, protect infrastructure and safeguard the environment; (3) integrate adaptation measures into national policies across all relevant sectors; and (4) increase knowledge of the impacts of climate change and of local and national level adaptation activities. 
+
+Barriers to the implementation of the NAPA include limited capacity with regards to planning and execution of public administration development objectives. An evaluation of the institutional landscape within the country’s public administration indicates four key weaknesses that should be appropriately addressed, these constitute the lack of: political decision-making; organizational capacity and management; qualified human resources; and material and financial resources.  
+
+In an effort to prioritize adaptation options, the NAPA selected projects through a multi-criteria analysis. The identification of criteria for climate vulnerable sectors was grounded on Sao Tome and Principe’s national priorities, including the specific and urgent needs of the population, poverty reduction with a focus on women and most vulnerable groups, in addition to the costs of adaptation options. The Saotomean government through the former Ministry of Public Works, Infrastructure, Natural Resources and Environment (MPWINRE), is responsible for the implementation of the NAPA and the adoption of recommendations contained within. 
+
+The demonstration of a stakeholder approach is clear. The goal of the latest version of the NAPA is to create a list of priority adaptation options guided by local knowledge and the experience of communities. In its implementation however, the INDC and NAPA combined, call for international support programs on account of limited financial resources to address or minimize the adverse effects of climate change.
+
+
+##  Coherence with the national development context, SDGs, SFDRR and other relevant frameworks:
+
+Consistent with the Third National Communication, there is an apparent lack of integration of climate change considerations embedded into broader national systems governing sectoral and national development in Sao Tome and Principe. Effective training tools and coherent cross-sectoral strategies and polices guided by a comprehensive institutional framework is needed to respond to the issue of climate change within national development policies. Certainly, climate change is a concern for the Saotomean population and a tremendous challenge for policy makers and decision-makers alike. Hence, a well-coordinated fully transparent approach is crucial for effective integration of climate change adaptation into existing governance, decision-making and institutional frameworks
+
+###	National Development Framework
+
+The country has crafted a policy framework to address medium- and long-term priorities that foster poverty reduction and sustainable economic growth (Sao Tome and Principe Readiness and Preparatory Support Proposal, 2020). Sao Tome and Principe’s transformation agenda built on the Vision 2030 “the country we want”, spotlights the post-2015 national development priorities grounded on four key areas, which comprise: (1) good governance for a strong democracy, (2) sustainable economic growth, (3) human development, and (4) cross-cutting issues such as behaviors and values. The 2nd Poverty Reduction Strategic Paper (PRSP) 2012-2016 closely mirrors the thematic priorities highlighted in the Vision 2030, although it covers a medium-term outlook. The Plan of Priority Action (PPA) 2013-2016, developed by the former Ministry of Finance, Commerce and Blue Economy supports the implementation of the PRSP, per a dedicated budget and creates an enabling environment aimed at resource mobilization. The intended successor of the 2nd PSRP is the National Development Plan (NDP) 2017-2021. 
+
+The NDP is designed upon five strategic objectives, which aim to: 
+
+*	Improve the exploitation of the country's potential and strengthen its integration into the global economy, to achieve accelerated and sustainable economic growth, employment and poverty reduction 
+*	Accelerate and deepen various reforms to significantly improve the human development index of Sao Tome and make substantial progress towards achieving SDGs by 2030 
+*	Improve strategic management capacity for national development, strengthen good governance and democracy 
+*	Develop infrastructure for energy, transport, water and sanitation, and promote the development of telecommunications and ICTs, to reduce the costs of production, improve living conditions of the population and explore the opportunities offered by the public-private partnership. 
+*	Improve land management and preservation of the environment 
+
+###	UNFCCC | Kyoto Protocol | Paris Agreement
+
+Sao Tome and Principe demonstrated its firm commitment to tackling climate change by signing the United Nations Framework Convention on Climate Change (UNFCCC) in 1992, later ratified in 1999. The country is committed to the Convention and partakes in the Conference of the Parties (COP) meetings that convene every year to assess the effects of the measures taken by Parties and the progress made in achieving the central objective of the Convention. The process undertaken by Sao Tome and Principe resulted in studies, national emission inventories, projects and appropriate adaptation actions to address the harmful effects of climate change. The country was also a signatory to the Kyoto Protocol in 1997, which was ratified in 2008. In 2015, Sao Tome and Principe signed the Paris Agreement, conveying its continued commitment to dealing with climate change and its impacts.   
+
+###	National Communication 
+
+Sao Tome and Principe lacks a National Program that facilitates the integration of climate change considerations into national development plans and policies (Third National Communication, 2019). Albeit, with the exception of primary, secondary and higher education level initiatives aimed at integrating climate change considerations into curricula and teachers’ pedagogical trainings. The extension of the National Communications has contributed to increasing awareness of national actors responsible for advancing climate change issues and its integration into national development policies (Third National Communication, 2019). National planning authorities further expect to implement an ambitious and comprehensive reform agenda mentioned in part in the 2017-2022 National Development Plan, building on the ENRP-II. 
+
+###	The 2030 Agenda and its SDGs
+
+In the MDG era, Sao Tome and Principe achieved a number of MDG targets particularly Goal 2: Achieve universal primary education; Goal 3: Promote gender equality and empower women; and Goal 4: Reducing child mortality. Whereas, the implementation of the Sustainable Development Goals (SDGs) poses a pressing challenge for the country due to the ambitious nature of the global goals. For this reason, Sao Tome and Principe has prioritized 6 SDGs for implementation, which constitute: 
+
+*	SDG 1: End poverty in all its forms, everywhere
+*	SDG 8: Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all
+*	SDG 9: Build resilient infrastructures, promote inclusive and sustainable industrialization and foster innovation
+*	SDG 13: Take urgent action to combat climate change and its impacts 
+*	SGD 15: Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss
+*	SDG 16: Promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable and inclusive institutions at all levels
+
+###	Sendai Framework for Disaster Risk Reduction (SFDRR)
+
+Sao Tome and Principe signed both the Hyogo Framework for Action (HFA) 2005-2015 and its successor, the Sendai Framework for Disaster Risk Reduction (SFDRR) 2015-2030. Through the interim phase of the Sendai Framework, the government led by the National Disaster Preparedness and Response Council (CONPREC) undertook an assessment of the national capacity to reduce the risk of disasters. The study highlighted the need to strengthen national coordination for disaster risk reduction along with disaster prevention, risk mitigation, preparedness, response, recovery and reconstruction . On account of the assessment, the Saotomean government further identified capacity needs and called for the establishment of a legal framework. Despite alignment with the Sendai Framework, the country lacks a national platform for disaster risk reduction that would serve as a coordination mechanism in the implementation, monitoring and review of the Sendai Framework to measure national level progress and reinforce effective coordination at all levels. National platforms for disaster risk reduction built through a nationally owned and led participatory process are multi-sectoral and interdisciplinary in nature and foster a multi-stakeholder composition in order to be effective and sustainable. 
+
+Challenges in the establishment of a legal and policy framework for climate change :
+
+While the country has increasingly prioritized the integration of climate change adaptation in the broader development framework, there are still a number of challenges that exist in the establishment of a legal and policy framework for climate change, these include: 
+
+*	The lack of understanding among various governmental and non-governmental stakeholders about climate change impacts, vulnerability characteristics as well as available adaptation options and their effects on the population
+*	Limited consideration of climate change and adaptation options into policies, strategies, plans and programmes especially at sectoral and local levels
+*	No comprehensive institutional framework in place in order to guide, coordinate and follow-up CCA investments mostly coming from scattered projects across the country
+*	Limited institutional, technical and financial capacity in the country to implement, monitor and maintain adaptation interventions
+

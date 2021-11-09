@@ -1,0 +1,8 @@
+"0","par(mfrow=c(2,2),mar=c(1, 0, 2, 2))"
+"0",""
+"0","# 126"
+"0","pr126.40<-raster(""C:/Workspace/RMardown_NAPS/Open-NAPs-Data/opennaps/WC_Fut_data/pr126/wc2.1_2.5m_prec_BCC-CSM2-MR_ssp126_2021-2040.tif"")%>%raster::crop(stp0_sf)%>%raster::mask(stp0_sf)"
+"0","#plot(pr126.40)"
+"0","prvar126<-pr.basemn-pr126.40"
+"0",""
+"0","plot(prvar126, axes=F, box=F, main='SSP1 - Sustainability', legend=F)"

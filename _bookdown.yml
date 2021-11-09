@@ -1,0 +1,5 @@
+book_filename: "Sao_Tome_Principe"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "

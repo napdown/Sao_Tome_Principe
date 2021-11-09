@@ -1,0 +1,7 @@
+"0",""
+"0","# 585"
+"0","pr585.40<-raster(""C:/Workspace/RMardown_NAPS/Open-NAPs-Data/opennaps/WC_Fut_data/pr585/wc2.1_2.5m_prec_BCC-CSM2-MR_ssp585_2021-2040.tif"")%>%raster::crop(stp0_sf)%>%raster::mask(stp0_sf)"
+"0","#plot(pr585.40)"
+"0","prvar585<-pr.basemn-pr585.40"
+"0",""
+"0","plot(prvar585, axes=F, box=F, main='SSP5 - Fossil-fueled Development', legend=F)"

@@ -1,0 +1,7 @@
+"0"," 
+tmin_ann<-tminlong%>%mutate(year=year(Date), month=month(Date))%>%
+  group_by(year)%>%  summarise(tmin=mean(tmin))
+"
+"2","Error in mutate(., year = year(Date), month = month(Date)) : 
+  object 'tminlong' not found
+"

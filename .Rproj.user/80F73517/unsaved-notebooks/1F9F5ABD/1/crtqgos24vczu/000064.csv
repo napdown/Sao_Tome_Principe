@@ -1,0 +1,5 @@
+"0","stp_chts<-get_chirts(latlon, dates, var='Tmax')
+"
+"2","Error in get_chirts(latlon, dates, var = ""Tmax"") : 
+  could not find function ""get_chirts""
+"

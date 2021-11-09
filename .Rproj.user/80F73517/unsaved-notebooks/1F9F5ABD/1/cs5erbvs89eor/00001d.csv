@@ -1,0 +1,5 @@
+"0","tmax_ann_ts<-xts(tmax_ann$tmax,tmax_ann$year)
+"
+"2","Error in xts(tmax_ann$tmax, tmax_ann$year) : 
+  order.by requires an appropriate time-based object
+"
