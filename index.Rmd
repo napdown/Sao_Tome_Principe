@@ -17,7 +17,8 @@ description: "São Tomé and Príncipe National Adaptation Plan"
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning=FALSE)
 ``` 
 
-```{r}
+```{r} 
+
 library(flextable)
 library(magrittr)
 acronyms<-readxl::read_excel("Tables_from_NAP.xlsx", 
@@ -35,10 +36,10 @@ t3
 
 ## Executive Summary {-} 
 
-
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
+
 ```

@@ -1,7 +1,0 @@
-"0",""
-"0","# 245"
-"0","pr245.40<-raster(""C:/Workspace/RMardown_NAPS/Open-NAPs-Data/opennaps/WC_Fut_data/pr245/wc2.1_2.5m_prec_BCC-CSM2-MR_ssp245_2021-2040.tif"")%>%raster::crop(principe)%>%raster::mask(principe)"
-"0","#plot(pr245.40)"
-"0","prvar245<-pr.baseprincipe-pr245.40"
-"0",""
-"0","plot(prvar245, axes=F, box=F, main='SSP2 - Middle of the Road', legend=F)"
