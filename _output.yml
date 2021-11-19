@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./">Sao Tome and Principe National Adaptation Plan</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/napdown/Sao-Tome-Principe/edit/MASTER/%s
+    edit: https://github.com/napdown/Sao_Tome_Principe/edit/MASTER/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
